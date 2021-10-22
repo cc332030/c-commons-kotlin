@@ -1,0 +1,39 @@
+
+[javadoc]*.options*.encoding = charset
+
+compileKotlin {
+  kotlinOptions {
+    jvmTarget = targetCompatibility
+  }
+}
+
+compileTestKotlin {
+  kotlinOptions {
+    jvmTarget = targetCompatibility
+  }
+}
+
+test {
+  useJUnitPlatform()
+}
+
+java {
+  withSourcesJar()
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(jdk_version)
+    vendor = JvmVendorSpec.ADOPTOPENJDK
+    implementation = JvmImplementation.J9
+  }
+}
+
+idea {
+  module {
+    downloadJavadoc = false
+    downloadSources = false
+  }
+}
+
+nexusStaging {
+  username ossrhUsername
+  password ossrhPassword
+}

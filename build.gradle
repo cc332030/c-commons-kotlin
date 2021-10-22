@@ -1,0 +1,18 @@
+plugins {
+  id "org.jetbrains.kotlin.jvm" version "1.5.31"
+  id "org.jetbrains.kotlin.plugin.spring" version "1.5.31"
+  id 'idea'
+  id 'maven-publish'
+  id 'signing'
+  id 'net.researchgate.release' version '2.8.1'
+  id 'io.codearte.nexus-staging' version '0.30.0'
+}
+
+dependencies {
+
+  implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+
+}
+
+apply from: 'compile.gradle'
+apply from: 'publish.gradle'
