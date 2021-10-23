@@ -1,27 +1,10 @@
 
-compileKotlin {
-  kotlinOptions {
-    jvmTarget = targetCompatibility
-  }
-}
-
-compileTestKotlin {
-  kotlinOptions {
-    jvmTarget = targetCompatibility
-  }
-}
-
 test {
   useJUnitPlatform()
 }
 
 java {
   withSourcesJar()
-  toolchain {
-    languageVersion = JavaLanguageVersion.of(jdk_version)
-    vendor = JvmVendorSpec.ADOPTOPENJDK
-    implementation = JvmImplementation.J9
-  }
 }
 
 idea {
