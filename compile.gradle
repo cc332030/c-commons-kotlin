@@ -24,13 +24,6 @@ java {
   }
 }
 
-idea {
-  module {
-    downloadJavadoc = false
-    downloadSources = false
-  }
-}
-
 nexusStaging {
   username ossrhUsername
   password ossrhPassword

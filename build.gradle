@@ -1,7 +1,6 @@
 plugins {
   id "org.jetbrains.kotlin.jvm" version "1.5.31"
   id "org.jetbrains.kotlin.plugin.spring" version "1.5.31"
-  id 'idea'
   id 'maven-publish'
   id 'signing'
   id 'net.researchgate.release' version '2.8.1'
